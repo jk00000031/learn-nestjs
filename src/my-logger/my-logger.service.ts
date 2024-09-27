@@ -23,13 +23,13 @@ export class MyLoggerService extends ConsoleLogger {
   }
 
   log(message: any, context?: string) {
-    const entry = `${context}\t${message}`;
+    const entry = `${context || this.context}\t${message}`;
     this.logToFile(entry);
     super.log(message, context);
   }
 
   error(message: any, stackOrContext?: string) {
-    const entry = `${stackOrContext}\t${message}`;
+    const entry = `${stackOrContext || this.context}\t${message}`;
     this.logToFile(entry);
     super.error(message, stackOrContext);
   }
