@@ -11,5 +11,5 @@
 执行该命令后即可使用：
 
 ```shell
-pnpm dlx prisma dev --name clone
+pnpm dlx prisma migrate dev --name clone
 ```
